@@ -83,9 +83,9 @@ These structures clearly describe the independencies encoded by a three-variable
 
 Let $$Q$$, $$W$$, and $$O$$ be three sets of nodes in a Bayesian Network $$G$$. We say that $$Q$$ and $$W$$ are $$d$$-separated given $$O$$ (*i.e.* the variables $$O$$ are observed) if $$Q$$ and $$W$$ are not connected by an *active path*. An undirected path in $$G$$ is called *active* given observed variables $$O$$ if for every consecutive triple of variables $$X,Y,Z$$ on the path, one of the following holds:
 
-- $$X \leftarrow Y \leftarrow Z$$, and $$Y$$ is unobserved $$Y \not\in O$$
-- $$X \rightarrow Y \rightarrow Z$$, and $$Y$$ is unobserved $$Y \not\in O$$
-- $$X \leftarrow Y \rightarrow Z$$, and $$Y$$ is unobserved $$Y \not\in O$$
+- $$X \leftarrow Y \leftarrow Z$$, and $$Y$$ is unobserved (*i.e.* $$Y \not\in O$$)
+- $$X \rightarrow Y \rightarrow Z$$, and $$Y$$ is unobserved (*i.e.* $$Y \not\in O$$)
+- $$X \leftarrow Y \rightarrow Z$$, and $$Y$$ is unobserved (*i.e.* $$Y \not\in O$$)
 - $$X \rightarrow Y \leftarrow Z$$, and $$Y$$ or any of its descendants are observed.
 {% include marginfigure.html id="dp2" url="assets/img/dsep2.png" description="In this example, $$X_1$$ and $$X_6$$ are $$d$$-separated given $$X_2, X_3$$." %}{% include marginfigure.html id="dp1" url="assets/img/dsep1.png" description="However, $$X_2, X_3$$ are not $$d$$-separated given $$X_1, X_6$$. There is an active pass which passed through the V-structure created when $$X_6$$ is observed." %}
 
